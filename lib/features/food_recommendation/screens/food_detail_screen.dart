@@ -8,6 +8,7 @@ import 'package:template/features/food_recommendation/models/food_subcategory.da
 import 'package:template/features/food_recommendation/screens/food_meat_selection_screen.dart';
 import 'package:template/features/food_recommendation/screens/food_noodle_selection_screen.dart';
 import 'package:template/features/food_recommendation/screens/food_result_screen.dart';
+import 'package:template/features/food_recommendation/screens/food_seafood_selection_screen.dart';
 import 'package:template/features/food_recommendation/widgets/food_subcategory_card.dart';
 
 /// 음식 상세 카테고리 화면
@@ -113,6 +114,16 @@ class FoodDetailScreen extends StatelessWidget {
                                   ),
                                 ),
                               );
+                            } else if (subcategory.id == 'seafood') {
+                              // 해산물을 선택한 경우 해산물 선택 화면으로 이동
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (_) => FoodSeafoodSelectionScreen(
+                                    subcategory: subcategory,
+                                  ),
+                                ),
+                              );
                             } else {
                               // 다른 카테고리는 기존대로 결과 화면으로 이동
                               Navigator.push(
@@ -150,6 +161,16 @@ class FoodDetailScreen extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (_) => FoodMeatSelectionScreen(
+                                subcategory: subcategory,
+                              ),
+                            ),
+                          );
+                        } else if (subcategory.id == 'seafood') {
+                          // 해산물을 선택한 경우 해산물 선택 화면으로 이동
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => FoodSeafoodSelectionScreen(
                                 subcategory: subcategory,
                               ),
                             ),

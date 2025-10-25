@@ -16,7 +16,8 @@
     "final_lunch_suggestion": "How about {} for lunch today?",
     "select_again": "Select Again",
     "noodle_selection_title": "Which noodle dish?",
-    "meat_selection_title": "Which meat dish?"
+    "meat_selection_title": "Which meat dish?",
+    "seafood_selection_title": "Which seafood dish?"
   },
   "settings": {
     "title": "Settings",

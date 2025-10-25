@@ -16,7 +16,8 @@
     "final_lunch_suggestion": "오늘의 점심은 {} 어때요?",
     "select_again": "다시 선택하기",
     "noodle_selection_title": "면 요리 중에서는?",
-    "meat_selection_title": "고기 요리 중에서는?"
+    "meat_selection_title": "고기 요리 중에서는?",
+    "seafood_selection_title": "해산물 요리 중에서는?"
   },
   "settings": {
     "title": "설정",
