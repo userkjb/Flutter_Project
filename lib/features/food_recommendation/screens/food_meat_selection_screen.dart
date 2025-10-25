@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
+import 'package:template/core/themes/app_colors.dart';
 import 'package:template/core/themes/app_typography.dart';
 import 'package:template/features/food_recommendation/models/food_subcategory.dart';
 import 'package:template/features/food_recommendation/models/meat_menu.dart';
@@ -20,31 +20,63 @@ class FoodMeatSelectionScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = context.colors;
+
     return Scaffold(
-      backgroundColor: const Color(0xFFF8F7F5),
+      backgroundColor: colors.surface,
       body: SafeArea(
         child: Column(
           children: [
-            // 상단 헤더 (뒤로가기 버튼)
+            // 상단 뒤로가기 버튼
             Padding(
-              padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
-              child: GestureDetector(
-                onTap: () => Navigator.pop(context),
-                child: SvgPicture.asset(
-                  'assets/images/meat_background.svg',
-                  width: 390,
-                  height: 72,
-                ),
+              padding: const EdgeInsets.fromLTRB(16, 20, 16, 0),
+              child: Row(
+                children: [
+                  IconButton(
+                    icon: Icon(
+                      Icons.arrow_back,
+                      color: colors.textPrimary,
+                      size: 28,
+                    ),
+                    onPressed: () => Navigator.pop(context),
+                  ),
+                ],
               ),
             ),
 
-            // 구분선 아이콘
+            // 구분선 (점 3개)
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 20),
-              child: SvgPicture.asset(
-                'assets/images/meat_dots.svg',
-                width: 390,
-                height: 48,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 8,
+                    height: 8,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFF2780D).withValues(alpha: 0.3),
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Container(
+                    width: 8,
+                    height: 8,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFF2780D).withValues(alpha: 0.3),
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Container(
+                    width: 8,
+                    height: 8,
+                    decoration: const BoxDecoration(
+                      color: Color(0xFFF2780D),
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                ],
               ),
             ),
 
