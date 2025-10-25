@@ -9,6 +9,8 @@
     "random_button": "랜덤 추천",
     "detail_title": "{} 중에서는 어떤 게 땡겨?",
     "recommend_anything": "아무거나 추천해줘!",
-    "random_result": "{}(이)가 어때요?"
+    "random_result": "{}(이)가 어때요?",
+    "result_title": "{} 중에서는?",
+    "final_result": "{}(이)가 어때요?"
   }
 }

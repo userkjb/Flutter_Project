@@ -9,6 +9,8 @@
     "random_button": "Random Recommendation",
     "detail_title": "What {} do you crave?",
     "recommend_anything": "Recommend me anything!",
-    "random_result": "How about {}?"
+    "random_result": "How about {}?",
+    "result_title": "What kind of {}?",
+    "final_result": "How about {}?"
   }
 }

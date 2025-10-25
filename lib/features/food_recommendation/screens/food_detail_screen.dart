@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:template/core/themes/app_typography.dart';
 import 'package:template/features/food_recommendation/models/food_category.dart';
 import 'package:template/features/food_recommendation/models/food_subcategory.dart';
+import 'package:template/features/food_recommendation/screens/food_result_screen.dart';
 import 'package:template/features/food_recommendation/widgets/food_subcategory_card.dart';
 
 /// 음식 상세 카테고리 화면
@@ -88,15 +89,39 @@ class FoodDetailScreen extends StatelessWidget {
                     if (index == subcategories.length - 1 &&
                         subcategories.length.isOdd) {
                       return GridTile(
-                        child: FoodSubcategoryCard(
-                          subcategory: subcategory,
-                          isFullWidth: true,
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) => FoodResultScreen(
+                                  subcategory: subcategory,
+                                ),
+                              ),
+                            );
+                          },
+                          child: FoodSubcategoryCard(
+                            subcategory: subcategory,
+                            isFullWidth: true,
+                          ),
                         ),
                       );
                     }
-                    return FoodSubcategoryCard(
-                      subcategory: subcategory,
-                      isFullWidth: false,
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => FoodResultScreen(
+                              subcategory: subcategory,
+                            ),
+                          ),
+                        );
+                      },
+                      child: FoodSubcategoryCard(
+                        subcategory: subcategory,
+                        isFullWidth: false,
+                      ),
                     );
                   },
                 ),
