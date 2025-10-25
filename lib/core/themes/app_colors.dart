@@ -41,10 +41,10 @@ class AppColors extends ThemeExtension<AppColors> {
 
   /// 밝은 테마용 기본 컬러 정의
   static const light = AppColors(
-    surface: Color(0xFFF5F5F5),
-    textPrimary: Color(0xFF000000),
+    surface: Color(0xFFE8DACE),
+    textPrimary: Color(0xFF1C140D),
     textSecondary: Color(0xFF666666),
-    primary: Color(0xFF2196F3),
+    primary: Color(0xFFF2780D),
     secondary: Color(0xFF03DAC6),
     error: Color(0xFFB00020),
     success: Color(0xFF4CAF50),

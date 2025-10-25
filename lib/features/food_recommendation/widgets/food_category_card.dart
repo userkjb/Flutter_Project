@@ -52,7 +52,7 @@ class FoodCategoryCard extends StatelessWidget {
           // 카테고리 이름
           Text(
             category.name,
-            style: AppTypography.title.copyWith(
+            style: AppTypography.cardTextJakarta.copyWith(
               color: const Color(0xFF1C140D),
             ),
           ),

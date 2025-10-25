@@ -10,7 +10,7 @@ final themeControllerProvider = NotifierProvider<ThemeController, ThemeMode>(
 class ThemeController extends Notifier<ThemeMode> {
   @override
   ThemeMode build() {
-    return ThemeMode.dark;
+    return ThemeMode.light;
   }
 
   /// 테마 모드를 토글하는 메소드
