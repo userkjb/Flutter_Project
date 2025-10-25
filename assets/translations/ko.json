@@ -15,5 +15,19 @@
     "lunch_menu": "Lunch Menu",
     "final_lunch_suggestion": "오늘의 점심은 {} 어때요?",
     "select_again": "다시 선택하기"
+  },
+  "settings": {
+    "title": "설정",
+    "theme": "테마 설정",
+    "dark_mode": "다크 모드",
+    "dark_mode_on": "다크 모드 사용 중",
+    "dark_mode_off": "라이트 모드 사용 중",
+    "language": "언어 설정",
+    "english_mode": "영어 모드",
+    "language_korean": "한국어",
+    "language_english": "English",
+    "about": "앱 정보",
+    "app_name": "음식 추천 앱",
+    "version": "버전 1.0.0"
   }
 }

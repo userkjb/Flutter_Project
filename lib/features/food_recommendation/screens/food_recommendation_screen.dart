@@ -9,6 +9,7 @@ import 'package:template/features/food_recommendation/controllers/food_recommend
 import 'package:template/features/food_recommendation/models/food_category.dart';
 import 'package:template/features/food_recommendation/screens/food_detail_screen.dart';
 import 'package:template/features/food_recommendation/widgets/food_category_card.dart';
+import 'package:template/features/settings/screens/settings_screen.dart';
 
 /// 음식 추천 메인 화면
 class FoodRecommendationScreen extends ConsumerWidget {
@@ -26,16 +27,41 @@ class FoodRecommendationScreen extends ConsumerWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              // 상단 이미지 영역
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20),
-                child: Center(
-                  child: SvgPicture.asset(
-                    'assets/blueberry.svg',
-                    width: 48,
-                    height: 48,
+              // 상단 설정 버튼 및 이미지 영역
+              Stack(
+                children: [
+                  // 중앙 이미지
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 20),
+                    child: Center(
+                      child: SvgPicture.asset(
+                        'assets/blueberry.svg',
+                        width: 48,
+                        height: 48,
+                      ),
+                    ),
                   ),
-                ),
+                  // 우측 상단 설정 버튼
+                  Positioned(
+                    top: 20,
+                    right: 16,
+                    child: IconButton(
+                      icon: Icon(
+                        Icons.settings,
+                        color: colors.textPrimary,
+                        size: 28,
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => const SettingsScreen(),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                ],
               ),
 
               // 제목
