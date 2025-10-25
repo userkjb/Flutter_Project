@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:template/core/themes/app_typography.dart';
 import 'package:template/features/food_recommendation/models/food_category.dart';
 import 'package:template/features/food_recommendation/models/food_subcategory.dart';
+import 'package:template/features/food_recommendation/screens/food_meat_selection_screen.dart';
 import 'package:template/features/food_recommendation/screens/food_noodle_selection_screen.dart';
 import 'package:template/features/food_recommendation/screens/food_result_screen.dart';
 import 'package:template/features/food_recommendation/widgets/food_subcategory_card.dart';
@@ -102,6 +103,16 @@ class FoodDetailScreen extends StatelessWidget {
                                   ),
                                 ),
                               );
+                            } else if (subcategory.id == 'meat') {
+                              // 고기를 선택한 경우 고기 선택 화면으로 이동
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (_) => FoodMeatSelectionScreen(
+                                    subcategory: subcategory,
+                                  ),
+                                ),
+                              );
                             } else {
                               // 다른 카테고리는 기존대로 결과 화면으로 이동
                               Navigator.push(
@@ -129,6 +140,16 @@ class FoodDetailScreen extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (_) => FoodNoodleSelectionScreen(
+                                subcategory: subcategory,
+                              ),
+                            ),
+                          );
+                        } else if (subcategory.id == 'meat') {
+                          // 고기를 선택한 경우 고기 선택 화면으로 이동
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => FoodMeatSelectionScreen(
                                 subcategory: subcategory,
                               ),
                             ),
