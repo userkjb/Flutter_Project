@@ -3,5 +3,12 @@
   "new_todo": "새 할 일",
   "add": "추가",
   "cancel": "취소",
-  "hint_enter_todo": "할 일을 입력하세요"
+  "hint_enter_todo": "할 일을 입력하세요",
+  "food": {
+    "title": "오늘은 어떤 음식을 먹을까?",
+    "random_button": "랜덤 추천",
+    "detail_title": "{} 중에서는 어떤 게 땡겨?",
+    "recommend_anything": "아무거나 추천해줘!",
+    "random_result": "{}(이)가 어때요?"
+  }
 }

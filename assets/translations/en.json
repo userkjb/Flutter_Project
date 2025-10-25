@@ -3,5 +3,12 @@
   "new_todo": "New Todo",
   "add": "Add",
   "cancel": "Cancel",
-  "hint_enter_todo": "Enter a todo"
+  "hint_enter_todo": "Enter a todo",
+  "food": {
+    "title": "What should I eat today?",
+    "random_button": "Random Recommendation",
+    "detail_title": "What {} do you crave?",
+    "recommend_anything": "Recommend me anything!",
+    "random_result": "How about {}?"
+  }
 }
