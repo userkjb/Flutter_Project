@@ -11,6 +11,9 @@
     "recommend_anything": "아무거나 추천해줘!",
     "random_result": "{}(이)가 어때요?",
     "result_title": "{} 중에서는?",
-    "final_result": "{}(이)가 어때요?"
+    "final_result": "{}(이)가 어때요?",
+    "lunch_menu": "Lunch Menu",
+    "final_lunch_suggestion": "오늘의 점심은 {} 어때요?",
+    "select_again": "다시 선택하기"
   }
 }

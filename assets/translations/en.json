@@ -11,6 +11,9 @@
     "recommend_anything": "Recommend me anything!",
     "random_result": "How about {}?",
     "result_title": "What kind of {}?",
-    "final_result": "How about {}?"
+    "final_result": "How about {}?",
+    "lunch_menu": "Lunch Menu",
+    "final_lunch_suggestion": "How about {} for lunch today?",
+    "select_again": "Select Again"
   }
 }

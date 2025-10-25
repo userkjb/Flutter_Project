@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:template/core/themes/app_typography.dart';
 import 'package:template/features/food_recommendation/models/food_item.dart';
 import 'package:template/features/food_recommendation/models/food_subcategory.dart';
+import 'package:template/features/food_recommendation/screens/food_final_screen.dart';
 import 'package:template/features/food_recommendation/widgets/food_result_card.dart';
 
 /// 음식 추천 결과 화면
@@ -85,7 +86,18 @@ class FoodResultScreen extends StatelessWidget {
                   ),
                   itemCount: foodItems.length,
                   itemBuilder: (context, index) {
-                    return FoodResultCard(foodItem: foodItems[index]);
+                    final foodItem = foodItems[index];
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => FoodFinalScreen(foodItem: foodItem),
+                          ),
+                        );
+                      },
+                      child: FoodResultCard(foodItem: foodItem),
+                    );
                   },
                 ),
               ),
