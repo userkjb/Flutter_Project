@@ -1,7 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:template/core/themes/app_colors.dart';
 import 'package:template/core/themes/app_typography.dart';
@@ -27,41 +26,70 @@ class FoodRecommendationScreen extends ConsumerWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              // 상단 설정 버튼 및 이미지 영역
-              Stack(
-                children: [
-                  // 중앙 이미지
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 20),
-                    child: Center(
-                      child: SvgPicture.asset(
-                        'assets/blueberry.svg',
-                        width: 48,
-                        height: 48,
+              // 상단 설정 버튼 및 점 3개 영역
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+                child: SizedBox(
+                  height: 48,
+                  child: Stack(
+                    children: [
+                      // 중앙 점 3개
+                      Center(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              width: 8,
+                              height: 8,
+                              decoration: const BoxDecoration(
+                                color: Color(0xFFF2780D),
+                                shape: BoxShape.circle,
+                              ),
+                            ),
+                            const SizedBox(width: 12),
+                            Container(
+                              width: 8,
+                              height: 8,
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFF2780D).withValues(alpha: 0.3),
+                                shape: BoxShape.circle,
+                              ),
+                            ),
+                            const SizedBox(width: 12),
+                            Container(
+                              width: 8,
+                              height: 8,
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFF2780D).withValues(alpha: 0.3),
+                                shape: BoxShape.circle,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                  ),
-                  // 우측 상단 설정 버튼
-                  Positioned(
-                    top: 20,
-                    right: 16,
-                    child: IconButton(
-                      icon: Icon(
-                        Icons.settings,
-                        color: colors.textPrimary,
-                        size: 28,
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (_) => const SettingsScreen(),
+                      // 우측 상단 설정 버튼
+                      Positioned(
+                        top: 0,
+                        right: 0,
+                        child: IconButton(
+                          icon: Icon(
+                            Icons.settings,
+                            color: colors.textPrimary,
+                            size: 28,
                           ),
-                        );
-                      },
-                    ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) => const SettingsScreen(),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                    ],
                   ),
-                ],
+                ),
               ),
 
               // 제목
